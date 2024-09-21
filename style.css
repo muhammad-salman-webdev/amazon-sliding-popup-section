@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+:root {
+    --c-sliding-anim-cards-container-width: 1200px;
+}
+
+.c_PL {
+    padding-left: calc(calc(100vw - 1200px) / 2);
+}
+
+.c_sliding-anim-popup-section {
+    transition: all .3s ease;
+    padding: 200px 0 150px;
+    background: linear-gradient(175.77deg, #FECFBB 0%, #FCD1C0 20%, #F3DAD3 40%, #F2DDDA 60%, #EDE1E1 80%, #EDE3E4 100%);
+
+    .c_sliding-anim-cards-main {
+        .c_sliding-anim-cards-headings {
+            max-width: var(--c-sliding-anim-cards-container-width);
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            .c_sliding-anim-headings {
+                max-width: 750px;
+
+                h5 {
+                    span {
+                        font-family: 'Inter';
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 2px;
+                        color: #000;
+                        text-transform: uppercase;
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+
+                h1 {
+                    font-family: 'Inter';
+                    font-size: 50px;
+                    font-weight: 400;
+                    line-height: 55px;
+                    letter-spacing: -0.699999988079071px;
+                    color: #161719;
+                    margin: 16px 0 15px;
+                }
+
+                p {
+                    span {
+                        font-family: 'Inter';
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        letter-spacing: 0.10000000149011612px;
+                        color: #161719;
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .c_sliding-anim-slider-btns {
+                margin: auto 0 16px;
+                border: 1px solid #00000033;
+                padding: 8px 7px;
+                border-radius: 16px;
+                display: flex;
+                gap: 8px;
+
+                .c_sliding-anim--btn {
+                    width: 48px;
+                    aspect-ratio: 1/1;
+                    display: grid;
+                    place-items: center;
+                    border: 1px solid #0D062833;
+                    border: 1px solid #0D0628;
+                    border-radius: 8px;
+                    background: none;
+                    outline: none;
+                    transition: all .3s ease;
+                    background: #00000000;
+                    cursor: pointer;
+
+                    svg {
+                        transition: all .3s ease;
+                        fill: #161719;
+                    }
+
+                    &:hover:not(:disabled) {
+                        background: #000000;
+
+                        svg {
+                            fill: #CBD2D9;
+                        }
+                    }
+
+                    &:disabled {
+                        border: 1px solid #0D062833;
+
+                        svg {
+                            fill: #16171933;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c_sliding-cards-swiper-container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 65px;
+
+            .s_sliding-cards-swiper-main {
+                .s_slidings-cards-swiper {
+                    width: 100%;
+                    transition: all 1.6s ease;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            width: 368px;
+
+                            .swiper-slide-main {
+                                background: #ffffff;
+                                width: 100%;
+                                overflow: hidden;
+                                border: 1px solid #000000;
+                                border-radius: 5px;
+
+                                .sliding-img {
+                                    height: 206px;
+                                    overflow: hidden;
+
+                                    img {
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                .sliding-card-body {
+                                    padding: 24px;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
