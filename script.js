@@ -57,7 +57,7 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
     body.style.top = `${-1 * scrolled}px`;
     body.setAttribute("data-scrolled-before", scrolled);
     setTimeout(() => {
-      body.style.top = `${-1 * scrolled - 1200}px`;
+      body.style.top = `${-1 * scrolled - 600}px`;
       setTimeout(() => {
         const popup = sliderPoups[_i];
         popup.classList.add("show");
@@ -74,7 +74,9 @@ sliderPoups.forEach((popup, _i) => {
 
   const closeBtn = popup.querySelector("button.c_popup-close-btn");
   closeBtn.addEventListener("click", () => {
-    popup.classList.remove("anim");
+    setTimeout(() => {
+      popup.classList.remove("anim");
+    }, 500);
     setTimeout(() => {
       popup.classList.remove("anim");
       setTimeout(() => {
