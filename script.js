@@ -64,6 +64,7 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
         popup.classList.add("show");
         setTimeout(() => {
           popup.classList.add("anim");
+          popup.classList.add("move");
           body.classList.add("no-scroll");
         }, 100);
       }, 1000);
@@ -75,18 +76,13 @@ sliderPoups.forEach((popup, _i) => {
 
   const closeBtn = popup.querySelector("button.c_popup-close-btn");
   closeBtn.addEventListener("click", () => {
+    popup.classList.remove("move");
     setTimeout(() => {
       popup.classList.remove("anim");
-    }, 500);
-    setTimeout(() => {
-      popup.classList.remove("anim");
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 300);
-
+      popup.classList.remove("show");
       body.classList.remove("no-scroll");
-
       body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
+
       setTimeout(() => {
         body.classList.remove("pause-body");
         window.scrollTo({
@@ -94,7 +90,7 @@ sliderPoups.forEach((popup, _i) => {
           behavior: "smooth",
         });
         body.style.top = "";
-      }, 2000);
-    }, 300);
+      }, 1600);
+    }, 1500);
   });
 });
