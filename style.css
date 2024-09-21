@@ -278,9 +278,9 @@ body.no-scroll {
             background: rgba(0, 0, 0, 0.48);
             background: #ffffff;
             display: none;
-            transition: all .7s ease;
-            top: 100vh;
-            opacity: 0;
+            transition: top .7s ease, opacity .4s ease;
+            top: -50vh;
+            opacity: 0.5;
 
             &.show {
                 display: block;

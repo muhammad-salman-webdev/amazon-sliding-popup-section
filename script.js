@@ -60,6 +60,7 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
       body.style.top = `${-1 * scrolled - 600}px`;
       setTimeout(() => {
         const popup = sliderPoups[_i];
+        popup.scrollTop = 0;
         popup.classList.add("show");
         setTimeout(() => {
           popup.classList.add("anim");
@@ -74,6 +75,8 @@ sliderPoups.forEach((popup, _i) => {
 
   const closeBtn = popup.querySelector("button.c_popup-close-btn");
   closeBtn.addEventListener("click", () => {
+    popup.scrollTop = 0;
+
     setTimeout(() => {
       popup.classList.remove("anim");
     }, 500);
@@ -84,7 +87,6 @@ sliderPoups.forEach((popup, _i) => {
       }, 300);
 
       body.classList.remove("no-scroll");
-      // body.classList.remove("pause-body");
 
       body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
       setTimeout(() => {
@@ -95,16 +97,6 @@ sliderPoups.forEach((popup, _i) => {
         });
         body.style.top = "";
       }, 2000);
-      // console.log();
-
-      // body.scrollTo({
-      //   top: 1000,
-      // });
-
-      // window.scrollTo({
-      //   top: body.getAttribute("data-scrolled-before"),
-      //   behavior: "smooth",
-      // });
     }, 300);
   });
 });
