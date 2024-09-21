@@ -32,3 +32,77 @@ const swiper = new Swiper(".s_slidings-cards-swiper#cSlidingCardsAnimSwiper", {
 });
 
 swiperElemPrevBtn.disabled = true;
+
+// Popup Functionality
+// cubic-bezier(1,.06,.22,.97)
+
+const sliderPopupBtns = swiperElem.querySelectorAll(
+  "button[data-open-popup-ANIM]"
+);
+
+const sliderPoups = document.querySelectorAll(
+  ".c_sliding_cards_popups-container#customSlidingCardsPopupContainer .c_sliding_card-specific-popup-container"
+);
+
+sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
+  sliderPopupBtn.addEventListener("click", () => {
+    // Pause the body
+
+    // Calculate the scrollbar width
+    const body = document.body;
+    const scrolled = window.scrollY;
+
+    body.classList.add("pause-body");
+
+    body.style.top = `${-1 * scrolled}px`;
+    body.setAttribute("data-scrolled-before", scrolled);
+    setTimeout(() => {
+      body.style.top = `${-1 * scrolled - 1200}px`;
+      setTimeout(() => {
+        const popup = sliderPoups[_i];
+        popup.classList.add("show");
+        setTimeout(() => {
+          popup.classList.add("anim");
+          body.classList.add("no-scroll");
+        }, 100);
+      }, 1000);
+    }, 10);
+  });
+});
+sliderPoups.forEach((popup, _i) => {
+  const body = document.body;
+
+  const closeBtn = popup.querySelector("button.c_popup-close-btn");
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("anim");
+    setTimeout(() => {
+      popup.classList.remove("anim");
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 300);
+
+      body.classList.remove("no-scroll");
+      // body.classList.remove("pause-body");
+
+      body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
+      setTimeout(() => {
+        body.classList.remove("pause-body");
+        window.scrollTo({
+          top: body.getAttribute("data-scrolled-before"),
+          behavior: "smooth",
+        });
+        body.style.top = "";
+      }, 2000);
+      // console.log();
+
+      // body.scrollTo({
+      //   top: 1000,
+      // });
+
+      // window.scrollTo({
+      //   top: body.getAttribute("data-scrolled-before"),
+      //   behavior: "smooth",
+      // });
+    }, 300);
+  });
+});
