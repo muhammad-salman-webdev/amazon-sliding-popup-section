@@ -91,6 +91,6 @@ sliderPoups.forEach((popup, _i) => {
         });
         body.style.top = "";
       }, 1600);
-    }, 1500);
+    }, 2500);
   });
 });

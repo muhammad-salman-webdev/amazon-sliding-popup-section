@@ -278,7 +278,7 @@ body.no-scroll {
             background: rgba(0, 0, 0, 0.48);
             background: #ffffff;
             display: none;
-            transition: all 2s ease, opacity .5s ease;
+            transition: all 3s ease, opacity .5s ease;
             top: -250vh;
             opacity: 0;
 
@@ -340,18 +340,25 @@ body.no-scroll {
                         }
 
                         .c_popup-header {
-                            h3 {
-                                display: flex;
-                                gap: 10px;
-                                align-items: center;
-                                font-family: 'Inter';
-                                font-size: 16px;
-                                font-weight: 300;
-                                line-height: 26.93px;
-                                letter-spacing: 0.30799999833106995px;
-                                color: #000000;
+                            &>div:has(h3) {
+                                h3 {
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
+                                    font-family: 'Inter';
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    line-height: 26.93px;
+                                    letter-spacing: 0.30799999833106995px;
+                                    color: #000000;
+                                    background: #F5F5F7;
+                                    padding: 5px 16px;
+                                    border-radius: 5px;
+                                    max-width: max-content;
+                                }
+
+                                padding: 0 0px 30px;
                                 border-bottom: 1px solid #000000;
-                                padding: 0 20px 30px;
                             }
                         }
 
