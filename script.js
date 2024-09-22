@@ -6,7 +6,7 @@ const swiperElemPrevBtn = document.querySelector(
 );
 const swiper = new Swiper(".s_slidings-cards-swiper#cSlidingCardsAnimSwiper", {
   // Optional parameters
-  //   direction: "vertical",
+
   loop: true,
   speed: 800,
   slidesPerView: "auto",
@@ -34,7 +34,6 @@ const swiper = new Swiper(".s_slidings-cards-swiper#cSlidingCardsAnimSwiper", {
 swiperElemPrevBtn.disabled = true;
 
 // Popup Functionality
-// cubic-bezier(1,.06,.22,.97)
 
 const sliderPopupBtns = swiperElem.querySelectorAll(
   "button[data-open-popup-ANIM]"
@@ -48,7 +47,6 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
   sliderPopupBtn.addEventListener("click", () => {
     // Pause the body
 
-    // Calculate the scrollbar width
     const body = document.body;
     const scrolled = window.scrollY;
 
@@ -93,23 +91,4 @@ sliderPoups.forEach((popup, _i) => {
       popup.classList.remove("show");
     }, 500);
   });
-
-  // closeBtn.addEventListener("click", () => {
-  //   popup.classList.remove("move");
-  //   setTimeout(() => {
-  //     popup.classList.remove("anim");
-  //     popup.classList.remove("show");
-  //     body.classList.remove("no-scroll");
-  //     body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
-
-  //     setTimeout(() => {
-  //       body.classList.remove("pause-body");
-  //       window.scrollTo({
-  //         top: body.getAttribute("data-scrolled-before"),
-  //         behavior: "smooth",
-  //       });
-  //       body.style.top = "";
-  //     }, 1600);
-  //   }, 2500);
-  // });
 });
