@@ -2,6 +2,29 @@
     .c_sliding-anim-popup-section {
         padding: 140px 0 120px;
     }
+
+    .c_sliding-anim-popup-section {
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    padding: 10px 40px;
+
+                    & .c_sliding-card-popup-main {
+                        & .c_sliding-anim-popup-content-container {
+                            & .c_popup-content-body {
+                                & .c_popup-big-title {
+                                    h1 {
+                                        font-size: 58.35px;
+                                        line-height: 70.33px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1300px) {
@@ -26,6 +49,41 @@
     .c_sliding-anim-popup-section {
         padding: 100px 0 80px;
     }
+
+    .c_sliding-anim-popup-section {
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    padding: 00px 20px;
+
+                    & .c_sliding-card-popup-main {
+                        & .c_sliding-anim-popup-content-container {
+
+                            .c_popup-header,
+                            & .c_popup-content-body {
+                                padding-left: 70px;
+                                padding-right: 70px;
+                            }
+
+                            & .c_popup-content-body {
+                                & .c_popup-big-title {
+                                    h1 {
+                                        font-size: 48.35px;
+                                        line-height: 60.33px;
+                                    }
+
+                                    img {
+                                        bottom: 30px;
+                                        width: 200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -46,6 +104,29 @@
                     h1 {
                         font-size: 44px;
                         line-height: 50px;
+                    }
+                }
+            }
+        }
+
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    & .c_sliding-card-popup-main {
+                        & .c_sliding-anim-popup-content-container {
+                            & .c_popup-content-body {
+                                & .c_popup-big-title {
+                                    h1 {
+                                        font-size: 40.35px;
+                                        line-height: 52.33px;
+                                    }
+
+                                    img {
+                                        width: 180px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -105,6 +186,47 @@
                 }
             }
         }
+
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    padding: 0;
+
+                    & .c_sliding-card-popup-main {
+                        & .c_sliding-anim-popup-content-container {
+                            & .c_popup-content-body {
+                                & .c_popup-big-title {
+                                    h1 {
+                                        font-size: 36.35px;
+                                        line-height: 46.33px;
+
+                                        br {
+                                            display: none;
+                                        }
+                                    }
+
+                                    img {
+                                        width: 160px;
+                                        right: -40px;
+                                        display: none;
+                                        bottom: 0;
+                                    }
+                                }
+
+                                .c_popup-services-grid-container {
+                                    grid-template-columns: 1fr;
+                                    grid-template-rows: repeat(auto-fill, minmax(105px, 1fr));
+
+                                    .c_popup-service-grid {
+                                        min-height: unset;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -137,6 +259,58 @@
                                 .swiper-slide-main {
                                     margin: 0 auto;
                                     width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    & .c_sliding-card-popup-main {
+                        & .c_sliding-anim-popup-content-container {
+
+                            .c_popup-header,
+                            & .c_popup-content-body {
+                                padding-left: 30px;
+                                padding-right: 30px;
+                            }
+
+                            & .c_popup-content-body {
+                                & .c_popup-big-title {
+                                    h1 {
+                                        font-size: 27.35px;
+                                        line-height: 35.33px;
+                                    }
+
+                                    div {
+                                        margin-top: 30px;
+
+                                        h3 {
+                                            font-size: 24px;
+                                            line-height: 41.54px;
+                                        }
+                                    }
+                                }
+
+                                .c_popup-services-grid-container {
+                                    .c_popup-service-grid {
+                                        padding: 20px;
+
+                                        div {
+                                            h2 {
+                                                font-size: 22.7px;
+                                                line-height: 27.41px;
+
+                                                span {
+                                                    font-size: 24.7px;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

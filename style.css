@@ -33,6 +33,11 @@ body.no-scroll {
     padding: 200px 0 150px;
     background: linear-gradient(175.77deg, #FECFBB 0%, #FCD1C0 20%, #F3DAD3 40%, #F2DDDA 60%, #EDE1E1 80%, #EDE3E4 100%);
 
+    * {
+        -webkit-tap-highlight-color: transparent;
+        /* Remove the light-blue highlight on touch screens */
+    }
+
     .c_sliding-anim-cards-main {
         .c_sliding-anim-cards-headings {
             max-width: var(--c-sliding-anim-cards-container-width);
