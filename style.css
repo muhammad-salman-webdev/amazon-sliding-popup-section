@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter';
+    box-sizing: border-box
 }
 
 /* Alternative of Arial Font*/
@@ -275,40 +276,53 @@ body.no-scroll {
 
     .c_sliding_cards_popups-container {
         .c_sliding_card-specific-popup-container {
-            background: rgb(255, 255, 255);
+            background: rgba(0, 0, 0, 0.407);
             position: fixed;
             inset: 0;
             overflow: auto;
             z-index: 9;
-            backdrop-filter: blur(10px);
-            background: rgba(0, 0, 0, 0.48);
+            backdrop-filter: blur(0px);
             background: #ffffff;
+            background: rgba(0, 0, 0, 0.48);
+            background: rgba(0, 0, 0, 0);
             display: none;
-            transition: all .8s ease, opacity .5s ease;
-            top: 100vh;
+            transition: all .8s ease;
+            /* top: 100vh; */
+            top: 0;
+            right: 0px;
             opacity: 0;
+            width: 100vw;
+            opacity: 1;
 
             &.show {
                 display: block;
             }
 
             &.anim {
-                opacity: 1;
+                background: rgba(0, 0, 0, 0.48);
+                backdrop-filter: blur(10px);
             }
 
             &.move {
-                top: 0;
+                .c_sliding-card-content-body-container {
+                    .c_sliding-card-popup-main {
+                        transform: translateX(0%);
+                    }
+                }
             }
 
             .c_sliding-card-content-body-container {
-                padding: 40px 100px;
+                overflow: hidden;
 
+                /* padding: 40px 100px; */
                 .c_sliding-card-popup-main {
                     background: rgb(255, 255, 255);
                     position: relative;
-                    border-radius: 25px;
+                    border-radius: 25px 0 0 25px;
                     max-width: 1440px;
-                    margin: 0 auto;
+                    margin: 0 0 00 auto;
+                    transform: translateX(100%);
+                    transition: all .5s ease;
 
                     /* overflow: hidden; */
                     .c_sliding-anim-popup-content-container {

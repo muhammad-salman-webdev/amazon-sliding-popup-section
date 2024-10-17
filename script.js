@@ -50,45 +50,46 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
     const body = document.body;
     const scrolled = window.scrollY;
 
-    body.classList.add("pause-body");
+    // body.classList.add("pause-body");
 
-    body.style.top = `${-1 * scrolled}px`;
-    body.setAttribute("data-scrolled-before", scrolled);
+    // body.style.top = `${-1 * scrolled}px`;
+    // body.setAttribute("data-scrolled-before", scrolled);
     setTimeout(() => {
-      body.style.top = `${-1 * scrolled - 600}px`;
+      // body.style.top = `${-1 * scrolled - 600}px`;
       setTimeout(() => {
         const popup = sliderPoups[_i];
         popup.scrollTop = 0;
+        body.classList.add("no-scroll");
         popup.classList.add("show");
         setTimeout(() => {
           popup.classList.add("anim");
           popup.classList.add("move");
-          body.classList.add("no-scroll");
-        }, 100);
-      }, 1000);
+        }, 10);
+      }, 10);
     }, 10);
   });
 });
+
 sliderPoups.forEach((popup, _i) => {
   const body = document.body;
 
   const closeBtn = popup.querySelector("button.c_popup-close-btn");
 
   closeBtn.addEventListener("click", () => {
-    body.classList.remove("no-scroll");
-    body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
-    body.classList.remove("pause-body");
-    window.scrollTo({
-      top: body.getAttribute("data-scrolled-before"),
-      behavior: "smooth",
-    });
-    body.style.top = "";
+    // body.style.top = `${-1 * body.getAttribute("data-scrolled-before")}px`;
+    // body.classList.remove("pause-body");
+    // window.scrollTo({
+    //   top: body.getAttribute("data-scrolled-before"),
+    //   behavior: "smooth",
+    // });
+    // body.style.top = "";
 
+    body.classList.remove("no-scroll");
     popup.classList.remove("anim");
+    popup.classList.remove("move");
 
     setTimeout(() => {
-      popup.classList.remove("move");
       popup.classList.remove("show");
-    }, 500);
+    }, 450);
   });
 });
