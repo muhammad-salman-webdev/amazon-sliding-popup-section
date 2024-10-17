@@ -7,8 +7,6 @@
         & .c_sliding_cards_popups-container {
             & .c_sliding_card-specific-popup-container {
                 & .c_sliding-card-content-body-container {
-                    padding: 10px 40px;
-
                     & .c_sliding-card-popup-main {
                         & .c_sliding-anim-popup-content-container {
                             & .c_popup-content-body {
@@ -35,6 +33,19 @@
     :root {
         --c-sliding-anim-cards-container-width: 90%;
     }
+
+    .c_sliding-anim-popup-section {
+        & .c_sliding_cards_popups-container {
+            & .c_sliding_card-specific-popup-container {
+                & .c_sliding-card-content-body-container {
+                    .c_sliding-card-popup-main {
+                        width: 100%;
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -54,8 +65,6 @@
         & .c_sliding_cards_popups-container {
             & .c_sliding_card-specific-popup-container {
                 & .c_sliding-card-content-body-container {
-                    padding: 00px 20px;
-
                     & .c_sliding-card-popup-main {
                         & .c_sliding-anim-popup-content-container {
 

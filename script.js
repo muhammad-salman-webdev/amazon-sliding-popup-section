@@ -64,6 +64,9 @@ sliderPopupBtns.forEach((sliderPopupBtn, _i) => {
         setTimeout(() => {
           popup.classList.add("anim");
           popup.classList.add("move");
+          setTimeout(() => {
+            popup.classList.add("move-close-btn");
+          }, 500);
         }, 10);
       }, 10);
     }, 10);
@@ -85,6 +88,7 @@ sliderPoups.forEach((popup, _i) => {
     // body.style.top = "";
 
     body.classList.remove("no-scroll");
+    popup.classList.remove("move-close-btn");
     popup.classList.remove("anim");
     popup.classList.remove("move");
 
